@@ -1,1 +1,65 @@
+Data Analysis & Insights Report
+Task 2 – Data Analysis and Insights Generation using Python
 
+Overview
+The objective of this analysis was to explore and generate actionable insights from the
+automotive repair dataset using Python. The focus was to clean the data, identify key patterns
+in repairs, analyze cost and usage behavior, and extract tags from customer feedback to
+support data-driven decision-making.
+
+Column-Wise Analysis
+The dataset contained 100 records and 52 columns including vehicle details, repair
+descriptions, costs, and feedback.
+Data types: Numeric, categorical, datetime, and text.
+Nulls: One column (CAMPAIGN_NBR) was fully missing and removed.
+Key columns: CUSTOMER_VERBATIM, CORRECTION_VERBATIM, TOTALCOST, KM, and
+CAUSAL_PART_NM held strong analytical value.
+
+Data Cleaning
+Standardized column names (uppercase, underscores).
+Filled missing categorical values with mode and numeric values with median.
+Fixed text inconsistencies (case, spacing) and capped numeric outliers using the IQR
+method.
+Final dataset had no missing or duplicate records and consistent formats across all
+columns.
+
+Critical Columns Identified
+1. CUSTOMER_VERBATIM – Real customer complaints.
+2. CORRECTION_VERBATIM – Technician’s actions.
+3. CAUSAL_PART_NM – Faulty part causing issue.
+4. TOTALCOST – Repair cost impact.
+5. KM – Vehicle usage, indicating wear and reliability.
+
+These fields link customer experience, technical repair data, and financial implications, giving
+the clearest insights for stakeholders.
+
+Visual Insights
+Top Causal Parts: Steering-related components appeared most frequently, suggesting
+recurring issues.
+Repair Cost Distribution: Right-skewed pattern showed most repairs were low-cost,
+with few expensive outliers.
+KM vs. Total Cost: Scatter analysis showed a positive correlation — higher mileage led
+to higher repair costs.
+These insights highlight both cost concentration areas and parts with high failure frequency.
+Generated Tags from Free Text
+Using TF-IDF, tags were extracted from combined customer and technician comments.
+Common tags like “steering,” “module,” “wheel,” and “replacement” summarized feedback
+themes and recurring failures. This approach can automate complaint grouping and speed up
+root-cause analysis.
+
+Key Insights & Recommendations
+Frequent Issues: Steering and module-related repairs dominate.
+Cost Trend: Higher vehicle KM relates to higher repair costs.
+Improvement Areas: Prioritize top recurring parts for quality checks.
+Automation: Use text tags to auto-classify complaints and detect patterns early.
+
+Actionable Steps:
+1. Focus on high-cost, frequent-failure parts.
+2. Monitor cost trends vs. KM to plan preventive maintenance.
+3. Integrate tag analytics in dashboards for faster fault detection.
+
+Conclusion
+The analysis successfully cleaned, explored, and summarized the dataset to reveal major cost
+drivers and recurring component failures. Text mining added value by automating issue
+tagging. The findings can directly support warranty cost control and proactive maintenance
+decisions.
